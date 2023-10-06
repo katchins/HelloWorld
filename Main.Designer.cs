@@ -1,6 +1,6 @@
 ﻿namespace HelloWorld
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,14 @@
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.populateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.countToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbxOutput = new System.Windows.Forms.ListBox();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +102,7 @@
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.populateToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
@@ -104,6 +112,7 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -116,6 +125,29 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // populateToolStripMenuItem
+            // 
+            this.populateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.countToolStripMenuItem,
+            this.resetToolStripMenuItem});
+            this.populateToolStripMenuItem.Name = "populateToolStripMenuItem";
+            this.populateToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.populateToolStripMenuItem.Text = "Populate";
+            // 
+            // countToolStripMenuItem
+            // 
+            this.countToolStripMenuItem.Name = "countToolStripMenuItem";
+            this.countToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.countToolStripMenuItem.Text = "Count";
+            this.countToolStripMenuItem.Click += new System.EventHandler(this.countToolStripMenuItem_Click);
+            // 
+            // resetToolStripMenuItem
+            // 
+            this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.resetToolStripMenuItem.Text = "Reset";
+            this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -123,11 +155,48 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // Form1
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(69, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Count";
+            // 
+            // lblData
+            // 
+            this.lblData.Location = new System.Drawing.Point(102, 172);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(103, 19);
+            this.lblData.TabIndex = 8;
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.AutoSize = false;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // lbxOutput
+            // 
+            this.lbxOutput.FormattingEnabled = true;
+            this.lbxOutput.HorizontalScrollbar = true;
+            this.lbxOutput.Location = new System.Drawing.Point(32, 205);
+            this.lbxOutput.Name = "lbxOutput";
+            this.lbxOutput.ScrollAlwaysVisible = true;
+            this.lbxOutput.Size = new System.Drawing.Size(317, 121);
+            this.lbxOutput.TabIndex = 9;
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 241);
+            this.ClientSize = new System.Drawing.Size(387, 338);
+            this.Controls.Add(this.lbxOutput);
+            this.Controls.Add(this.lblData);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.label2);
@@ -136,7 +205,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mnuMain);
             this.MainMenuStrip = this.mnuMain;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Hello World";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mnuMain.ResumeLayout(false);
@@ -158,6 +227,13 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem populateToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem countToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ListBox lbxOutput;
     }
 }
 
